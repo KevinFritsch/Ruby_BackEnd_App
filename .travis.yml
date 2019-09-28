@@ -5,3 +5,11 @@ rvm:
 script:
   - bundle exec rails db:migrate RAILS_ENV=test
   - bundle exec rake
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: "AclS23xcrbkIyWIYZn86y/5Zygj+9H49toDP/DJv4mwwILOUq+RRB0WympWeap+Q3SUSPjE3/mGPjjL4WQf2vbgtk2p/Db7Jyb0NfruWobm6mpjorJ6avfySnvPinF1mSfnnAEcptYBdht2CsmLgiHjPekd1IXLe3dEG5oGParJgZ5nFY1k7vlNMgLSQDklfDIiSFAHmdciZcchEcNSYOmDjIUqe1xeMSbAPnqN2Cv6WHDjPdl2D27cqxLxIKRYKCUyOG+GKnataG2fAPm+Z1D8fgVn03BDk6Y1TSqjEbWQTYRCLOTgvKK6jptu6ruuZYNl/dOIxUjqZ9/M7XtjsNUPtvwtFgq4zDGOanq3pPdHUvs07MHCyzok/OWDgyw8y5D4QEFrA3NhB6WKKhBWBDF543LI6VzYzek0PrBsCfli89ThKbiiXqocVEHC8ZioODw9IciIHAuGqEIy4bRoP9VPO0zy7VlNzLOuGdvUE+mNOaVJPoqnLF6z/hYclh2fb1xtHoP6xGxJr8zPERweV6hw+KK1VeAk16LE5R7koS1TyQ87c/mB1TvqFFBcgz2BXeTA6zxkOEgSlfn9hif3E800wPPfwlKfSw2oZVwbgFu2dOXO2g0lo2UAAaCimwJAGVY6nbT7+z4U1x42lCyrT9ApTJ8qGYq7bIq04NUyhBFc="
+  app: backend--heroku-kfritsch
+  on:
+    repo: KevinFritsch/backend
