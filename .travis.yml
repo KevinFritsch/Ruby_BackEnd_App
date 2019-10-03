@@ -13,4 +13,4 @@ deploy:
   app: backend--heroku-kfritsch
   on:
     repo: KevinFritsch/backend
-  skip_cleanup: true
+ 
