@@ -7,7 +7,10 @@ ruby '2.5.5'
 gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
 
-gem 'pg', '~> 1.1', '>= 1.1.4', group: :production
+gem 'sqlite3', group: [:test, :development]
+
+#0.18.4
+gem 'pg', '~> 1.1', '>= 1.1.4', group: [:production]
 
 
 
@@ -42,7 +45,6 @@ gem 'bootsnap', '1.4.1', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'sqlite3'
 
 end
 
