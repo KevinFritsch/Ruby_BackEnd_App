@@ -1,5 +1,7 @@
 class CountersController < ApplicationController
   before_action :set_counter, only: [:show, :edit, :update, :destroy]
+  skip_before_action  :verify_authenticity_token, :only => [:update]
+  #si on fait curl -X PATCH http://localhost:3000/counters/1
 
   # GET /counters
   # GET /counters.json
